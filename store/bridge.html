@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Store bridge</title>
+<script>
+// Hands store-listing files (only those under /store/) to App Store Connect or Google Play Console when they ask.
+const ALLOWED = ['https://appstoreconnect.apple.com', 'https://play.google.com'];
+window.addEventListener('message', async (e) => {
+  if (!ALLOWED.includes(e.origin) || !e.data || !Array.isArray(e.data.want)) return;
+  const files = [];
+  for (const p of e.data.want) {
+    if (!/^[a-z0-9-]+\/[A-Za-z0-9._-]+$/.test(p)) continue;
+    const r = await fetch('/store/' + p, { cache: 'no-store' });
+    if (!r.ok) continue;
+    files.push({ name: p.replace('/', '-'), type: r.headers.get('content-type') || 'application/octet-stream', buf: await r.arrayBuffer() });
+  }
+  e.source.postMessage({ id: e.data.id, files }, e.origin, files.map((f) => f.buf));
+});
+parent.postMessage({ bridge: 'ready' }, '*');
+</script>

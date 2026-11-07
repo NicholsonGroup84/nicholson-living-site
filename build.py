@@ -9,6 +9,7 @@ PAGES = {
     "index": ("index.html", "Nicholson Living", "The tenant app from Nicholson Lettings.", "lake-night", "A Nicholson building by the lake at night"),
     "privacy": ("privacy/index.html", "Privacy notice · Nicholson Living", "How Nicholson Lettings uses personal information in the Nicholson Living app.", "kitchen-evening", "A Nicholson apartment in the evening"),
     "delete-account": ("delete-account/index.html", "Delete your account · Nicholson Living", "How to delete your Nicholson Living app account and what happens to your data.", "kitchen-day", "A Nicholson apartment kitchen"),
+    "staff-privacy": ("staff-privacy/index.html", "Staff apps privacy notice · NicoNet and NicoMGT", "How Nicholson Group uses personal information in the NicoNet and NicoMGT staff apps.", "living-lake", "A Nicholson apartment living room overlooking the lake"),
     "support": ("support/index.html", "Help and support · Nicholson Living", "Help with the Nicholson Living tenant app.", "living-lake", "A Nicholson apartment living room overlooking the lake"),
 }
 

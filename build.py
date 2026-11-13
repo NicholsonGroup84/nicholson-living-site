@@ -31,7 +31,7 @@ TEMPLATE = """<!doctype html>
 <body>
 <div class="wrap">
 <header class="site"><a href="/"><img src="/logo.png" alt="Nicholson"></a></header>
-<div class="rule">Nicholson Living</div>
+<div class="rule">Nicholson Living™</div>
 <figure class="hero"><img src="/img/{img}.jpg" alt="{alt}" loading="eager"></figure>
 <main>
 {body}
@@ -39,6 +39,7 @@ TEMPLATE = """<!doctype html>
 <footer>
 <p><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/delete-account/">Delete account</a></p>
 <p>Nicholson Lettings Limited · 116 Duke Street, Liverpool L1 5JW · Company no. 13369529 · ICO registration ZC289932</p>
+<p>Nicholson Living™, NicoNet™ and NicoMGT™ are trade marks of PJN Holdings Limited.</p>
 </footer>
 </div>
 </body>

@@ -12,6 +12,9 @@ PAGES = {
     "staff-privacy": ("staff-privacy/index.html", "Staff apps privacy notice · NicoNet and NicoMGT", "How Nicholson Group uses personal information in the NicoNet and NicoMGT staff apps.", "living-lake", "A Nicholson apartment living room overlooking the lake"),
     "terms": ("terms/index.html", "Terms of use · Nicholson Living, NicoNet and NicoMGT", "The terms for using the Nicholson Living, NicoNet and NicoMGT apps.", "kitchen-day", "A Nicholson apartment kitchen"),
     "support": ("support/index.html", "Help and support · Nicholson Living", "Help with the Nicholson Living tenant app.", "living-lake", "A Nicholson apartment living room overlooking the lake"),
+    "get-niconet": ("get/niconet/index.html", "Download NicoNet™ · Nicholson", "Download the NicoNet™ app.", "living-lake", "A Nicholson apartment living room overlooking the lake"),
+    "get-nicomgt": ("get/nicomgt/index.html", "Download NicoMGT™ · Nicholson", "Download the NicoMGT™ app.", "living-lake", "A Nicholson apartment living room overlooking the lake"),
+    "get-living": ("get/living/index.html", "Download Nicholson Living™ · Nicholson", "Download the Nicholson Living™ app.", "living-lake", "A Nicholson apartment living room overlooking the lake"),
 }
 
 TEMPLATE = """<!doctype html>

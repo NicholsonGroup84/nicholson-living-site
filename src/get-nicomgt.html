@@ -1,0 +1,23 @@
+<h1>Download NicoMGT™</h1>
+<p class="lede">NicoMGT™: the Nicholson management app</p>
+
+<div class="card">
+<p><a class="btn" id="play" href="https://play.google.com/store/apps/details?id=uk.co.nicholsongroup.nicomgt">Get it on Google Play</a></p>
+<p><a class="btn" id="ios" href="/nicomgt/">Download on the App Store</a></p>
+<p><a href="/nicomgt/">Or use NicoMGT™ in your web browser</a></p>
+</div>
+
+<h2>Signing in</h2>
+<p>Sign in with your work email and the six-digit code we email you, then your authenticator code.</p>
+<p>Codes come from office@nicholsongroup.co.uk. Check your junk folder if one has not arrived.</p>
+
+<script>
+// Printed QR codes point here, so the store links can change without reprinting.
+var APP_STORE = ''; // App Store link for NicoMGT™: add it here when the listing is live
+var ua = navigator.userAgent || '';
+var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && 'ontouchend' in document);
+if (APP_STORE) document.getElementById('ios').href = APP_STORE;
+else document.getElementById('ios').parentNode.style.display = 'none';
+if (/Android/.test(ua)) location.replace(document.getElementById('play').href);
+else if (ios && APP_STORE) location.replace(APP_STORE);
+</script>

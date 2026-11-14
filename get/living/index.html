@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download Nicholson Living™ · Nicholson</title>
+<meta name="description" content="Download the Nicholson Living™ app.">
+<meta name="theme-color" content="#050607">
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Fraunces:opsz@9..144&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site"><a href="/"><img src="/logo.png" alt="Nicholson"></a></header>
+<div class="rule">Nicholson Living™</div>
+<figure class="hero"><img src="/img/living-lake.jpg" alt="A Nicholson apartment living room overlooking the lake" loading="eager"></figure>
+<main>
+<h1>Download Nicholson Living™</h1>
+<p class="lede">Nicholson Living™: the resident app from Nicholson Lettings</p>
+
+<div class="card">
+<p><a class="btn" id="play" href="https://play.google.com/store/apps/details?id=uk.co.nicholsongroup.tenant">Get it on Google Play</a></p>
+<p><a class="btn" id="ios" href="/app/">Download on the App Store</a></p>
+<p><a href="/app/">Or use Nicholson Living™ in your web browser</a></p>
+</div>
+
+<h2>Signing in</h2>
+<p>Sign in with the email address you gave us for your tenancy and the six-digit code we email you. No password.</p>
+<p>Codes come from office@nicholsongroup.co.uk. Check your junk folder if one has not arrived.</p>
+
+<script>
+// Printed QR codes point here, so the store links can change without reprinting.
+var APP_STORE = ''; // App Store link for Nicholson Living™: add it here when the listing is live
+var ua = navigator.userAgent || '';
+var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && 'ontouchend' in document);
+if (APP_STORE) document.getElementById('ios').href = APP_STORE;
+else document.getElementById('ios').parentNode.style.display = 'none';
+if (/Android/.test(ua)) location.replace(document.getElementById('play').href);
+else if (ios && APP_STORE) location.replace(APP_STORE);
+</script>
+</main>
+<footer>
+<p><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/delete-account/">Delete account</a></p>
+<p>Nicholson Lettings Limited · 116 Duke Street, Liverpool L1 5JW · Company no. 13369529 · ICO registration ZC289932</p>
+<p>Nicholson Living™, NicoNet™ and NicoMGT™ are trade marks of PJN Holdings Limited.</p>
+</footer>
+</div>
+</body>
+</html>

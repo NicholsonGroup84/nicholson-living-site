@@ -15,6 +15,7 @@ PAGES = {
     "get-niconet": ("get/niconet/index.html", "Download NicoNet™ · Nicholson", "Download the NicoNet™ app.", "living-lake", "A Nicholson apartment living room overlooking the lake"),
     "get-nicomgt": ("get/nicomgt/index.html", "Download NicoMGT™ · Nicholson", "Download the NicoMGT™ app.", "living-lake", "A Nicholson apartment living room overlooking the lake"),
     "get-living": ("get/living/index.html", "Download Nicholson Living™ · Nicholson", "Download the Nicholson Living™ app.", "living-lake", "A Nicholson apartment living room overlooking the lake"),
+    "guides": ("guides/index.html", "App guides · Nicholson", "The NicoNet, Nicholson Living and NicoMGT guides.", "living-lake", "A Nicholson apartment living room overlooking the lake"),
 }
 
 TEMPLATE = """<!doctype html>

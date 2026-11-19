@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>Call · Nicholson</title>
+<meta name="theme-color" content="#050607">
+<link rel="icon" href="/favicon.png">
+<style>
+  html, body { margin: 0; height: 100%; background: #050607; color: #eef2f2; font-family: Archivo, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+  main { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px; box-sizing: border-box; text-align: center; }
+  .eyebrow { font-size: 11px; letter-spacing: 0.22em; color: #3fd0c9; text-transform: uppercase; margin-bottom: 14px; }
+  h1 { font-family: Fraunces, Georgia, serif; font-weight: 400; font-size: 30px; margin: 0 0 10px; }
+  p { color: #8fa3a3; font-size: 15px; line-height: 1.5; margin: 0 0 22px; max-width: 320px; }
+  a.btn { display: block; width: 100%; max-width: 320px; box-sizing: border-box; background: #3fd0c9; color: #050607; font-weight: 600; font-size: 20px; padding: 18px 20px; border-radius: 10px; text-decoration: none; }
+  .small { font-size: 13px; margin-top: 22px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<!-- Opened by the Call button in the NicoNet and NicoMGT phone apps, after the call has been logged. The number arrives
+     in the part of the address after # (never sent to the server) and is used only to open the phone's dialler. -->
+<main>
+  <div class="eyebrow">Nicholson</div>
+  <h1 id="t">Call the resident</h1>
+  <p id="s">The call has been logged. Press Call to dial.</p>
+  <a class="btn" id="go" href="#" hidden>Call</a>
+  <p class="small" id="done">When you have finished, press Done to go back to the app.</p>
+</main>
+<script>
+(function () {
+  var q = new URLSearchParams(location.hash.slice(1));
+  var n = (q.get('n') || '').replace(/[^\d+]/g, '');
+  var r = (q.get('r') || '').replace(/[^A-Za-zÀ-ÿ' -]/g, '').slice(0, 40);
+  try { history.replaceState(null, '', location.pathname); } catch (e) {}
+  if (!/^\+?\d{6,15}$/.test(n)) {
+    document.getElementById('t').textContent = 'No number to call';
+    document.getElementById('s').textContent = 'Go back to the app and press Call on the job again.';
+    document.getElementById('done').textContent = 'Press Done to go back to the app.';
+    return;
+  }
+  var go = document.getElementById('go');
+  if (r) document.getElementById('t').textContent = 'Call ' + r;
+  go.textContent = 'Call ' + n.replace(/^(\+44|0)(\d{4})(\d+)$/, function (_, a, b, c) { return (a === '+44' ? '+44 ' : '0') + b + ' ' + c; });
+  go.href = 'tel:' + n;
+  go.hidden = false;
+})();
+</script>
+</body>
+</html>
